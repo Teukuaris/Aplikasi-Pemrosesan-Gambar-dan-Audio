@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pemrosesan Gambar dan Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aplikasi Pemrosesan Gambar dan Audio</h1>
+        <form action="http://127.0.0.1:5000/resize" method="post" enctype="multipart/form-data">
+            <div class="file-input">
+                <label for="imageInput" class="file-label">Pilih Gambar</label>
+                <input type="file" name="image" id="imageInput" accept="image/*">
+            </div>
+            <button type="submit">Resize</button>
+        </form>
+
+        <form action="http://127.0.0.1:5000/compress" method="post" enctype="multipart/form-data">
+            <div class="file-input">
+                <label for="audioInput" class="file-label">Pilih Audio</label>
+                <input type="file" name="audio" id="audioInput" accept="audio/*">
+            </div>
+            <button type="submit">Compress</button>
+        </form>
+
+        <div id="imagePreview" class="preview"></div>
+        <div id="audioPreview" class="preview"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
